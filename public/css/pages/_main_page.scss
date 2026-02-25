@@ -1,0 +1,139 @@
+@use '../variables' as *;
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*=== Globální sekce stránky ===*/
+.section {
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.grid_content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  /*Medium devices (tablets) (col-md-*) */
+  @media (max-width: $screen_w_sm) {
+    padding: 0;
+  }
+}
+
+/*=== Karta (např. výklad a nahrání) ===*/
+.p6_card {
+  background-color: white;
+  border: 1px solid $clr-primary-150;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 24px;
+}
+
+.p6_card_inner {
+  padding: 20px;
+
+  /*Medium devices (tablets) (col-md-*) */
+  @media (max-width: $screen_w_sm) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+  }
+}
+
+/*=== Tlačítka ===*/
+.btn_fill {
+  display: inline-block;
+  background-color: $clr-primary-700;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-align: center;
+  font-family: $font_family;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_fill:hover {
+  background-color: $clr-primary-900;
+}
+
+/*=== Záložky ===*/
+.tabs_nav {
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  /*Medium devices (tablets) (col-md-*) */
+  @media (max-width: $screen_w_sm) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.tabs_nav > * {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  font-family: $font_family;
+  color: #444;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tabs_nav > *[data-state="active"] {
+  color: white;
+}
+
+/*=== Načítání a chybové hlášky ===*/
+.loading_box {
+  text-align: center;
+  padding: 20px;
+  background-color: $clr-primary-100;
+  border: 1px solid $clr-primary-150;
+  border-radius: 6px;
+  margin-top: 16px;
+}
+
+.loading_spinner {
+  margin: 0 auto 12px auto;
+  color: $clr-primary-400;
+  animation: spin 3s linear infinite;
+}
+
+.loading_text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $clr-primary-600;
+}
+
+.loading_caption {
+  color: $clr-primary-800;
+}
+
+.error_box {
+  background-color: $clr-primary-150;
+  border: 1px solid $clr-error-300;
+  padding: 12px;
+  border-radius: 6px;
+  color: $clr-error-500;
+  margin-top: 16px;
+}
+
+/* Placeholder pro věštby bez uloženého obrázku */
+.reading-thumb--placeholder,
+.page-detail__reading--image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  font-size: 3rem;
+  min-height: 120px;
+}

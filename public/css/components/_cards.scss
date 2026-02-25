@@ -1,0 +1,35 @@
+@use '../variables' as *;
+
+.card {
+  background-color: white;
+  border: 1px solid $clr-primary-150;
+  border-radius: 8px;
+  box-shadow: $shadow-sm;
+  overflow: hidden;
+}
+
+.card__header {
+  padding: $gap_5 $gap_6;
+  border-bottom: 1px solid $clr-neutral-150;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: $clr-primary-900;
+}
+
+.card__description {
+  font-size: 14px;
+  color: $clr-primary-600;
+}
+
+.card__content {
+  padding: $gap_1;
+}
+
+.card__footer {
+  padding: $gap_5 $gap_6;
+  border-top: 1px solid $clr-neutral-150;
+  background-color: $clr-neutral-50;
+}

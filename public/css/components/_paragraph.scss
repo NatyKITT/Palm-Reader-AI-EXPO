@@ -1,0 +1,63 @@
+@use '../variables' as *;
+
+.paragraph.dropdown {
+  .h {
+    cursor: pointer;
+
+    span {
+      margin: 0 20px 0 0;
+    }
+
+    .icon {
+      -webkit-transform: translate(0, -1px) rotate(180deg);
+      -ms-transform: translate(0, -1px) rotate(180deg);
+      transform: translate(0, -1px) rotate(180deg);
+      display: inline-block;
+      width: 18px;
+    }
+  }
+
+  .paragraph_dropcontent {
+    display: none;
+  }
+
+  &.open {
+    .paragraph_dropcontent {
+      display: block;
+    }
+
+    .h .icon {
+      -webkit-transform: translate(0, -1px) rotate(0);
+      -ms-transform: translate(0, -1px) rotate(0);
+      transform: translate(0, -1px) rotate(0);
+    }
+  }
+}
+
+.paragraph--label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: $clr-primary-900;
+}
+
+/*████████████████████████████ BOOTSTRAP VIEWPORTS (without min-width) */
+/*Extra large devices (desktops) (col-xl-*) */
+@media (max-width: $screen_w_xl) {
+}
+
+/*Large devices (desktops) (col-lg-*) */
+@media (max-width: $screen_w_lg) {
+}
+
+/*Medium devices (tablets) (col-md-*) */
+@media (max-width: $screen_w_md) {
+}
+
+/*Small devices (landscape phones) (col-sm-*) */
+@media (max-width: $screen_w_sm) {
+}
+
+/*Extra small devices (portrait phones) (col-*) */
+@media (max-width: $screen_w_xs) {
+}

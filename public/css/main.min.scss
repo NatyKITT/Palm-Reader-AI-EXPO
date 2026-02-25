@@ -1,0 +1,26 @@
+@use 'normalize' as *;
+@use 'variables' as *;
+@use 'fonts' as *;
+@use 'base' as *;
+
+@use 'components_minor' as *;
+
+@use 'components/layouts' as *;
+@use 'components/cards' as *;
+@use 'components/dialog' as *;
+@use 'components/scroll_area' as *;
+@use 'components/tabs' as *;
+@use 'components/texts' as *;
+@use 'components/buttons' as *;
+@use 'components/custom_select' as *;
+@use 'components/grid_lt_wd' as *;
+@use 'components/grid_ofs_subc' as *;
+@use 'components/overlay' as *;
+@use 'components/header' as *;
+@use 'components/datepicker' as *;
+@use 'components/cstm_checkbox_radio' as *;
+@use 'components/paragraph' as *;
+@use 'components/footer' as *;
+
+@use 'pages/main_page' as *;
+@use 'pages/err_pages' as *;

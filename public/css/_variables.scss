@@ -1,0 +1,137 @@
+/*misc*/
+$font_family: "CivilPremium", Arial, sans-serif;
+$column: 8.333333333333333;
+$gap_1: 4px;
+$gap_2: 8px;
+$gap_3: 12px;
+$gap_4: 16px;
+$gap_5: 20px;
+$gap_6: 24px;
+$gap_7: 28px;
+$gap_8: 32px;
+$desktop_gap_5: $gap_8*2;
+$mobile_gap_5: $gap_7*2;
+
+/*lt_txt sizes*/
+$lt_txt_sidebar: 24.3%;
+$lt_txt_right: 75.7%;
+$lt_txt_main: 736px;
+$lt_txt_main_padding: 35px;
+
+/*screen sizes*/
+$screen_w_xl: 1400px;
+$screen_w_lg: 1280px;
+$screen_w_md: 992px;
+$screen_w_sm: 768px;
+$screen_w_xs: 576px;
+
+/*content widths*/
+$content-w-base: 1120px;
+$content-w-border: 1200px;
+$content-w-shadow: 1280px;
+
+/*misc*/
+$column: 8, 333333333333333;
+
+/*screen sizes*/
+$screen_w_xl: 1400px;
+$screen_w_lg: 1200px;
+$screen_w_md: 992px;
+$screen_w_sm: 768px;
+$screen_w_xs: 576px;
+
+/*colors*/
+$primary: #005CA5; /*rgb(0, 92, 165)*/
+$secondary: #052770; /*rgb(5, 39, 112)*/
+$darkgrey: #2f2f2f; /*rgb(47, 47, 47)*/
+$grey: #808693; /*rgb(128, 134, 148)*/
+$lightgrey: #d2d8e5; /*rgb(210, 216, 229)*/
+$whiteblue: #f0f5f9; /*rgb(240, 245, 249)*/
+$lightorange: #fceed0; /*rgb(252, 238, 208)*/
+$overlay: #0c255a45;
+
+/*colors*/
+$clr-primary-50: #F2FFFE;
+$clr-primary-100: #E5FCFA;
+$clr-primary-150: #CEF9F5;
+$clr-primary-300: #9DE8E1;
+$clr-primary-400: #00B199;
+$clr-primary-500: #029B83;
+$clr-primary-600: #00847C;
+$clr-primary-700: #0B6D73;
+$clr-primary-800: #0B5059;
+$clr-primary-900: #053849;
+
+$clr-warning-100: #FEF7C8;
+$clr-warning-300: #FEE068;
+$clr-warning-500: #FBBF2F;
+$clr-warning-700: #875D17;
+$clr-warning-900: #5C4012;
+$clr-error-100: #FFE1D1;
+$clr-error-300: #FE9479;
+$clr-error-500: #FF1F16;
+$clr-error-700: #C91726;
+$clr-error-900: #6E0E23;
+$clr-success-100: #E2F9D7;
+$clr-success-300: #93E186;
+$clr-success-500: #38A03D;
+$clr-success-700: #1E6E2C;
+$clr-success-900: #104722;
+$clr-info-100: #EDF7FF;
+$clr-info-300: #D4E7F6;
+$clr-info-500: #007BED;
+$clr-info-700: #0056A5;
+$clr-info-900: #052770;
+
+$clr-neutral-50: #F4F8F9;
+$clr-neutral-100: #EEF6F6;
+$clr-neutral-150: #D3E5E8;
+$clr-neutral-300: #B9CCCE;
+$clr-neutral-500: #8D9D9F;
+$clr-neutral-700: #6B797A;
+$clr-neutral-800: #485051;
+
+/*shadows (box-shadow: -var-)*/
+$shadow-sm: 0 4px 8px -2px rgba(37, 75, 75, 0.10), 0 2px 4px -2px rgba(37, 75, 75, 0.06);
+$shadow-md: 0 12px 16px -4px rgba(37, 75, 75, 0.08), 0 4px 6px -2px rgba(37, 75, 75, 0.03);
+$shadow-lg: 0 20px 24px -4px rgba(37, 75, 75, 0.08), 0 8px 8px -4px rgba(37, 75, 75, 0.03);
+$shadow-lg-top: 0 -20px 24px -4px rgba(37, 75, 75, 0.08), 0 -8px 8px -4px rgba(37, 75, 75, 0.03);
+$shadow-xl: 0 -7px 158px 0 rgba(69, 117, 117, 0.12), 0 -2.56px 57.67px 0 rgba(69, 117, 117, 0.0828), 0 -1.24 28px 0 rgba(69, 117, 117, 0.0668), 0 -0.61px 13.73px 0 rgba(69, 117, 117, 0.0532), 0 -0.24px 5.43px 0 rgba(69, 117, 117, 0.0372);
+
+/*blur (backdrop-filter: blur(-var-))*/
+$blur-sm: 12px;
+$blur-md: 20px;
+$blur-lg: 32px;
+
+//Fix for empty space above/below font
+//Mixin generated at: http://text-crop.eightshapes.com
+//calculate line-height "number" = LineHeightPx / fontSize
+@mixin text-crop($font-size: 16/*px*/, $line-height: 20/*px*/, $top-adjustment: 0px, $bottom-adjustment: 0px) {
+  // Configured in Step 1
+  $line-height: calc($line-height / $font-size);
+  $top-crop: 0;
+  $bottom-crop: 3;
+  $crop-font-size: 16;
+  $crop-line-height: 1.2;
+
+  // Apply values to calculate em-based margins that work with any font size
+  $dynamic-top-crop: calc(max(($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size);
+  $dynamic-bottom-crop: calc(max(($bottom-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size);
+
+  // Mixin output
+  line-height: $line-height;
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+  }
+  &::before {
+    margin-bottom: calc(-#{$dynamic-top-crop}em + #{$top-adjustment});
+  }
+  &::after {
+    margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment});
+  }
+}
+

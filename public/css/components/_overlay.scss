@@ -1,0 +1,124 @@
+@use '../variables' as *;
+
+.overlay {
+  background-color: $clr-primary-900;
+}
+
+.overlay_popup {
+  &.overlay_global {
+    top: 0;
+    height: 100vh;
+    position: fixed;
+    z-index: 900;
+  }
+
+  display: none;
+  position: absolute;
+  top: 98px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  /*width: calc(100vw - 18px);*/
+  width: 100%;
+  max-width: 1920px;
+  z-index: 990;
+  overflow-y: hidden;
+  cursor: auto;
+
+  > .content {
+    background-color: white;
+    padding: 15px 20.7% 56px 20.7%;
+    margin-bottom: 50px;
+    width: 100%;
+    -webkit-box-shadow: 0 2px 13px rgba(5, 56, 73, 36);
+    box-shadow: 0 2px 13px rgba(5, 56, 73, 36);
+  }
+
+  &.search > .content {
+    padding-top: 6px;
+    padding-bottom: 66px;
+  }
+}
+
+body {
+  &.menu_open .overlay_popup.overlay_global,
+  &.search_open .overlay_popup.overlay_global,
+  &.translate_open .overlay_popup.overlay_global,
+  &.gallery_open .overlay_popup.overlay_global {
+    display: block;
+  }
+}
+
+/*████████████████████████████ BOOTSTRAP VIEWPORTS (without min-width) */
+/*Extra large devices (desktops) (col-xl-*) */
+@media (max-width: $screen_w_xl) {
+  .overlay_popup .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/*Large devices (desktops) (col-lg-*) */
+@media (max-width: $screen_w_lg) {
+}
+
+/*Medium devices (tablets) (col-md-*) */
+@media (max-width: $screen_w_md) {
+  .overlay_popup {
+    top: 75px;
+  }
+  .overlay_popup > .content {
+    padding-top: 7px;
+    padding-bottom: 24px;
+  }
+  .overlay_popup.translate_menu > .content {
+    padding-top: 0;
+  }
+}
+
+/*Small devices (landscape phones) (col-sm-*) */
+@media (max-width: $screen_w_sm) {
+}
+
+/*Extra small devices (portrait phones) (col-*) */
+@media (max-width: $screen_w_xs) {
+}
+
+.header {
+  background-color: $clr-primary-400;
+  color: white;
+}
+
+.footer {
+  background-color: $clr-primary-100;
+}
+
+.spacer, .spacer td, .spacer p {
+  opacity: 0;
+  visibility: hidden;
+  color: white;
+  color: rgba(255, 255, 255, 0);
+}
+
+@media (max-width: 730px) {
+  .content_wrapper_table_cell, .header-inner, .footer-inner {
+    padding: 0 16px !important;
+  }
+  .main_footer_columns, .main_footer_column,
+  .main_footer_column.col01 {
+    padding-bottom: 32px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer_btn_row i {
+    width: 100% !important;
+  }
+  .footer_of_footer, .footer_of_footer_cell {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+}

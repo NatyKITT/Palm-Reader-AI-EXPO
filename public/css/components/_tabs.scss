@@ -1,0 +1,41 @@
+@use '../variables' as *;
+
+.tabs-list {
+  display: flex;
+  justify-content: center;
+  gap: $gap_4;
+  padding: $gap_2;
+  background-color: $clr-primary-100;
+  border-radius: 8px;
+  margin-bottom: $gap_4;
+}
+
+.tabs-trigger {
+  font-family: Poppins-SemiBold, sans-serif;
+  font-size: 15px;
+  line-height: 23px;
+  padding: 10px 20px;
+  color: $clr-primary-800;
+  background-color: white;
+  border: 2px solid $clr-primary-300;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $clr-primary-300;
+    color: $clr-primary-900;
+    text-decoration: none;
+  }
+
+  &[data-state="active"] {
+    background-color: $clr-primary-500;
+    color: white;
+    border-color: $clr-primary-600;
+  }
+}
+
+.tabs-content {
+  margin-top: $gap_4;
+}

@@ -1,0 +1,50 @@
+@use '../variables' as *;
+
+.scrollarea-root {
+  position: relative;
+  overflow: auto;
+  border: 1px solid $clr-primary-150;
+  border-radius: 4px;
+  background-color: white;
+  max-height: 600px;
+}
+
+.scrollarea-viewport {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollarea-scrollbar {
+  display: flex;
+  user-select: none;
+  touch-action: none;
+  transition: background-color 160ms ease-out;
+  background-color: $clr-primary-100;
+
+  &.vertical {
+    height: 100%;
+    width: 12px;
+    padding: 2px;
+  }
+
+  &.horizontal {
+    flex-direction: column;
+    height: 12px;
+    width: 100%;
+    padding: 2px;
+  }
+}
+
+.scrollarea-thumb {
+  flex: 1;
+  background-color: $clr-primary-300;
+  border-radius: 6px;
+  position: relative;
+
+  &:hover {
+    background-color: $clr-primary-400;
+  }
+}

@@ -1,0 +1,165 @@
+@use '../variables' as *;
+
+.grid_lt_wd {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 68%;
+  margin: 0 auto;
+}
+
+.lt_wd .lt_box_main > .grid_lt_wd {
+  margin-top: 30px;
+
+  /*margin-bottom: 30px;*/
+}
+
+.grid_lt_wd {
+  .spacercol {
+    display: none;
+  }
+
+  > .grid_sublvl {
+    display: block;
+    width: 100%;
+    float: none;
+
+    > .grid_content {
+      width: 100%;
+      float: none;
+      position: relative;
+
+      > {
+        p, a:not(.btn) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .bottom_border {
+    width: 100%;
+    margin-top: 40px;
+
+    .btn_section {
+      margin-top: -2px;
+    }
+  }
+}
+
+.grid_lt_wd_bordered {
+  border: 3px solid $clr-primary-150;
+  padding: 65px 44px 65px 44px;
+  width: calc(68% + 88px);
+
+  &.btm_border_btn {
+    margin-bottom: 26px;
+  }
+
+  .bottom_border {
+    position: absolute;
+    margin-top: 48px;
+
+    .btn_section {
+      max-width: 100%;
+      text-align: center;
+      position: absolute;
+      top: -10px;
+      padding: 14px 50px;
+      margin: 0;
+    }
+
+    .circle {
+      position: absolute;
+      right: -70px;
+      bottom: -40px;
+      width: 48px;
+      height: 48px;
+      background-color: $clr-primary-150;
+      border-radius: 50%;
+    }
+  }
+}
+
+.grid_shadow_01 {
+  background-color: $clr-primary-150;
+  padding: 45px 76px;
+  width: calc(68% + 152px);
+}
+
+.grid_shadow_02 {
+  background-color: $clr-primary-150;
+  padding: 25px 76px;
+  width: calc(68% + 152px);
+}
+
+.grid_shadow_03 {
+  background-color: $clr-primary-150;
+  padding: 20px 30px;
+  width: calc(68% + 60px);
+}
+
+.grid_shadow_01.grid_shadow_inset, .grid_shadow_02.grid_shadow_inset, .grid_shadow_03.grid_shadow_inset {
+  width: 68%;
+}
+
+/*████████████████████████████ BOOTSTRAP VIEWPORTS (without min-width) */
+/*Extra large devices (desktops) (col-xl-*) */
+@media (max-width: $screen_w_xl) {
+  .grid_lt_wd {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .grid_shadow_01.grid_shadow_inset, .grid_shadow_02.grid_shadow_inset, .grid_shadow_03.grid_shadow_inset {
+    width: 100%;
+  }
+  .grid_lt_wd_bordered .grid_content, .grid_lt_wd_bordered .bottom_border {
+    border: none;
+  }
+  .grid_lt_wd_bordered .bottom_border .circle {
+    display: none;
+  }
+  .grid_lt_wd_bordered {
+    border: none;
+  }
+}
+
+/*Large devices (desktops) (col-lg-*) */
+@media (max-width: $screen_w_lg) {
+}
+
+/*Medium devices (tablets) (col-md-*) */
+@media (max-width: $screen_w_md) {
+  .grid_lt_wd_bordered {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .grid_lt_wd .bottom_border {
+    margin-top: 30px;
+    bottom: 0;
+    position: static;
+  }
+  .grid_lt_wd:not(.btm_border_btn) .bottom_border {
+    display: none;
+  }
+  .grid_lt_wd_bordered .bottom_border .btn_section {
+    position: static;
+  }
+  .grid_lt_wd_bordered.btm_border_btn {
+    margin-bottom: 0;
+  }
+  .grid_shadow_01, .grid_shadow_02, .grid_shadow_03 {
+    padding: 30px 20px;
+  }
+}
+
+/*Small devices (landscape phones) (col-sm-*) */
+@media (max-width: $screen_w_sm) {
+  /*.lt_box_main > .grid_lt_wd {margin: 20px 0;}*/
+}
+
+/*Extra small devices (portrait phones) (col-*) */
+@media (max-width: $screen_w_xs) {
+}
+

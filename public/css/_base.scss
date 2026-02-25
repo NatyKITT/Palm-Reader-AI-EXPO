@@ -1,0 +1,153 @@
+@use 'variables' as *;
+
+html {
+  scroll-behavior: smooth; /*for anchor link smoothing (does not affect basic scroll)*/
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  width: 100%;
+  min-width: 270px;
+  font-family: $font_family;
+  background-color: white;
+  color: $clr-primary-900;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+}
+
+main {
+  padding-left: $gap_4;
+  padding-right: $gap_4;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: normal;
+}
+
+input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: normal;
+}
+
+input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: normal;
+}
+
+input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: normal;
+}
+
+input::placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: normal;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+//remove safari rounded corners
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+iframe {
+  border: none;
+}
+
+blockquote {
+  padding: 20px;
+  background-color: $clr-primary-100;
+  color: $clr-primary-900;
+}
+
+blockquote > div {
+  border-left: 3px solid;
+  border-left-color: $clr-primary-900;
+  padding: 0 0 0 20px;
+}
+
+.noscript_cont {
+  .noscript_alert {
+    color: red;
+  }
+
+  .menu {
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+
+    > .content {
+      margin-bottom: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+/*ssg styles:*/
+#js-data {
+  display: none;
+}
+
+/*████████████████████████████ MEDIA QUERIES */
+/*Extra large devices (desktops) (col-xl-*) */
+@media (max-width: $screen_w_xl) {
+
+}
+
+/*Large devices (desktops) (col-lg-*) */
+@media (max-width: $screen_w_lg) {
+}
+
+/*Medium devices (tablets) (col-md-*) */
+@media (max-width: $screen_w_md) {
+}
+
+/*Small devices (landscape phones) (col-sm-*) */
+@media (max-width: $screen_w_sm) {
+}
+
+/*Extra small devices (portrait phones) (col-*) */
+@media (max-width: $screen_w_xs) {
+}

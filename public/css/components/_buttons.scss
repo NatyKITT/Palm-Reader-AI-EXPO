@@ -1,0 +1,507 @@
+@use '../variables' as *;
+
+body {
+  .btn {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-width {
+    width: 20rem;
+
+    @media (max-width: 824px) {
+      width: unset;
+    }
+  }
+
+  .btn_fill {
+    display: inline-block;
+    background-color: $clr-primary-700;
+    border: 2px solid #00000000;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    padding: 15px 55px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+
+    &--get-reading {
+      margin: 1.5rem;
+
+      @media (max-width: $screen_w_sm) {
+        margin: 1rem 0 0 0;
+      }
+    }
+
+    span {
+      display: block;
+      color: white;
+      font-family: $font_family;
+      letter-spacing: 0.56px;
+      font-size: 15px;
+    }
+
+    &:hover, &:focus {
+      background-color: $clr-primary-400;
+    }
+  }
+
+  .btn_bordered {
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: white;
+    position: relative;
+    padding: 15px 55px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid $clr-primary-400;
+    cursor: pointer;
+    text-decoration: none;
+
+    span {
+      display: block;
+      font-family: $font_family;
+      color: $clr-primary-400;
+      font-size: 15px;
+      line-height: 23px;
+      letter-spacing: 0.56px;
+    }
+
+    &:hover, &:focus {
+      background-color: $clr-primary-150;
+    }
+  }
+
+  .btn_bordered_icon {
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    padding: 10px 15px 10px 52px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid $clr-primary-400;
+    cursor: pointer;
+
+    .icon {
+      position: absolute;
+      height: 100%;
+      left: calc(52px / 2); /*left button padding / 2*/
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    > span {
+      display: block;
+      line-height: 36px;
+      letter-spacing: 0.56px;
+      font-size: 16px;
+      font-family: $font_family;
+      text-transform: uppercase;
+      color: $clr-primary-400;
+    }
+
+    &:hover, &:focus {
+      background-color: $clr-primary-150;
+    }
+  }
+
+  .btn_borderedlight {
+    display: inline-block;
+    font-size: 14px;
+    background-color: white;
+    position: relative;
+    padding: 10px 15px;
+    min-width: 250px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid $clr-primary-400;
+    cursor: pointer;
+
+    > span {
+      display: block;
+      font-family: $font_family;
+      line-height: 36px;
+      color: $clr-primary-400;
+      letter-spacing: 0.56px;
+    }
+
+    &:hover, &:focus {
+      background-color: $clr-primary-150;
+    }
+  }
+
+  .btn_borderedlight_icon {
+    display: inline-block;
+    font-size: 14px;
+    background-color: white;
+    position: relative;
+    padding: 10px 15px 10px 52px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /*IE support*/
+    border: 1px solid $clr-primary-400;
+    cursor: pointer;
+
+    > {
+      .icon {
+        position: absolute;
+        height: 100%;
+        left: calc(52px / 2); /*left button padding / 2*/
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      span {
+        display: block;
+        text-align: left;
+        font-family: $font_family;
+        line-height: 36px;
+        color: $clr-primary-400;
+        letter-spacing: 0.56px;
+      }
+    }
+
+    &:hover, &:focus {
+      background-color: $clr-primary-150;
+    }
+  }
+
+  .btn_borderedlight_arrow {
+    display: block;
+    font-size: 14px;
+    background-color: white;
+    position: relative;
+    padding: 10px 50px 10px 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /*IE support*/
+    border: 1px solid $clr-primary-400;
+    cursor: pointer;
+    min-height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    > {
+      .icon {
+        position: absolute;
+        height: 100%;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%) rotate(90deg);
+        -ms-transform: translate(-50%, -50%) rotate(90deg);
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+      span {
+        display: block;
+        text-align: left;
+        font-family: $font_family;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.09px;
+        color: $clr-primary-400;
+      }
+    }
+
+    &:hover, &:focus {
+      background-color: $clr-primary-150;
+    }
+  }
+}
+
+.btn_arrow {
+  cursor: pointer;
+
+  .icon {
+    display: inline-block;
+    height: 24px;
+    margin: 0 6px 0 0;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 24px;
+    font-size: 17px;
+    color: inherit;
+    text-decoration: none;
+    font-family: $font_family;
+
+    &.date {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 24px;
+      font-size: 17px;
+      color: inherit;
+      text-decoration: none;
+      font-family: $font_family;
+    }
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 24px;
+    font-size: 17px;
+    color: inherit;
+    text-decoration: none;
+    font-family: $font_family;
+  }
+
+  &:hover {
+    span, a {
+      text-decoration: underline;
+    }
+  }
+
+  &:focus {
+    span, a {
+      text-decoration: underline;
+    }
+  }
+
+  .date {
+    display: inline-block;
+    margin: 0 0 0 16px;
+    padding: 0 0 0 16px;
+    border-left: 2px solid;
+    border-left-color: $clr-primary-300;
+    font-size: 15px;
+    font-family: $font_family;
+    line-height: 10px;
+  }
+}
+
+.btn_link {
+  cursor: pointer;
+  font-size: 14px;
+
+  span, a {
+    display: inline-block;
+    font-family: $font_family;
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 0.17px;
+    color: $clr-primary-700;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    span, a {
+      text-decoration: auto;
+    }
+  }
+
+  &:focus {
+    span, a {
+      text-decoration: auto;
+    }
+  }
+
+  .date {
+    display: inline-block;
+    margin: 0 0 0 14px;
+    padding: 0 0 0 14px;
+    border-left: 2px solid;
+    border-left-color: $clr-primary-300;
+    font-size: 15px;
+    font-family: $font_family;
+    line-height: 10px;
+    color: $clr-primary-300;
+    text-decoration: none;
+  }
+}
+
+.inputbtn_combo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  display: flex;
+
+  .input_cont {
+    flex: 1;
+    height: 57px;
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 22px 40px 22px 22px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  }
+
+  .btn {
+    padding: 15px 20.5px;
+  }
+}
+
+.btn.btn_section {
+  min-width: 280px;
+  text-align: center;
+  margin: 48px 0 0 0;
+  padding: 14px 50px;
+}
+
+.btn_move_up_cont {
+  position: sticky;
+  bottom: 90px;
+  height: 0;
+}
+
+.btn_move_up {
+  display: none;
+  float: right;
+  margin-top: 25px;
+  margin-right: calc(22.577778% + 20px);
+  z-index: 500;
+  background: white;
+  padding: 8px;
+  white-space: nowrap;
+
+  .icon {
+    float: left;
+    height: 24px;
+  }
+
+  span {
+    line-height: 26px;
+    letter-spacing: normal;
+    text-underline-offset: 2px;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    font-size: 16px;
+    text-decoration: underline;
+    font-family: $font_family;
+    color: $clr-primary-700;
+  }
+
+  &:hover span, &:focus span {
+    text-decoration: auto;
+  }
+}
+
+.btn_grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-transform: translate(-16px, 0);
+  -ms-transform: translate(-16px, 0);
+  transform: translate(-16px, 0);
+  width: calc(100% + 32px);
+  row-gap: 24px;
+
+  > .btn_cont {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 0 16px 0 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  &.col_count_2 > .btn_cont {
+    width: 50%;
+  }
+
+  &.col_count_3 > .btn_cont {
+    width: 33.333333%;
+  }
+
+  &.col_count_4 > .btn_cont {
+    width: 25%;
+  }
+
+  > .btn_cont .btn {
+    width: 100%;
+  }
+}
+
+.bsIE .btn_grid > .btn_cont {
+  margin-bottom: 24px;
+}
+
+/*████████████████████████████ BOOTSTRAP VIEWPORTS (without min-width) */
+/*Extra large devices (desktops) (col-xl-*) */
+@media (max-width: $screen_w_xl) {
+}
+
+/*Large devices (desktops) (col-lg-*) */
+@media (max-width: $screen_w_lg) {
+}
+
+/*Medium devices (tablets) (col-md-*) */
+@media (max-width: $screen_w_md) {
+  body .btn_fill, body .btn_bordered {
+    padding: 18px 28px;
+  }
+  body .btn.btn_section {
+    padding: 14px 28px;
+  }
+  body .btn_fill span, body .btn_bordered span {
+    font-family: $font_family;
+    letter-spacing: 0.567px;
+    font-size: 15px;
+    line-height: 23px;
+  }
+  .btn_move_up_cont {
+    text-align: center;
+
+    .btn_move_up {
+      float: none;
+      margin: 20px 0 0 0;
+    }
+  }
+  .btn.btn_section {
+    margin-top: 30px;
+  }
+  .btn_grid {
+    width: 100%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    row-gap: 15px;
+  }
+  .btn_grid.col_count_2 > .btn_cont, .btn_grid.col_count_3 > .btn_cont, .btn_grid.col_count_4 > .btn_cont {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/*Small devices (landscape phones) (col-sm-*) */
+@media (max-width: $screen_w_sm) {
+  .lt_box_main > .btn_cont.grid_lt_wd .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .btn.btn_section {
+    width: 100%;
+    text-align: center;
+  }
+  .btn_fullcenter_sm {
+    width: 100%;
+  }
+}
+
+/*Extra small devices (portrait phones) (col-*) */
+@media (max-width: $screen_w_xs) {
+  .btn_section {
+    width: 100%
+  }
+}

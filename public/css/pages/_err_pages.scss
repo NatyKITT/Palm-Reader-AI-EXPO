@@ -1,0 +1,75 @@
+@use '../variables' as *;
+
+.err_page {
+  min-height: 100vh;
+  background-color: $clr-primary-50; //margin-top: -30px;
+  .err_main_section {
+    text-align: center;
+  }
+
+  .logo {
+    height: 40px;
+    margin: 5px auto 0 auto;
+  }
+
+  .illustration {
+    max-height: 358px;
+    margin: 60px auto;
+  }
+
+  .err_type {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: normal;
+    letter-spacing: 1.75px;
+    color: $clr-primary-900;
+  }
+
+  h1 {
+    color: $clr-primary-600;
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  .err_info {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    max-width: 544px;
+    margin: 35px auto;
+  }
+}
+
+/*████████████████████████████ MEDIA QUERIES */
+/*Extra large devices (desktops) (col-xl-*) */
+@media (max-width: $screen_w_xl) {
+}
+
+/*Large devices (desktops) (col-lg-*) */
+@media (max-width: $screen_w_lg) {
+}
+
+/*Medium devices (tablets) (col-md-*) */
+@media (max-width: $screen_w_md) {
+  .err_page {
+    .illustration {
+      max-height: 358px;
+      margin: 100px auto 60px auto;
+    }
+
+    .err_info {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.25px;
+    }
+  }
+}
+
+/*Small devices (landscape phones) (col-sm-*) */
+@media (max-width: $screen_w_sm) {
+}
+
+/*Extra small devices (portrait phones) (col-*) */
+@media (max-width: $screen_w_xs) {
+}

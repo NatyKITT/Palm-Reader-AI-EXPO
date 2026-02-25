@@ -1,0 +1,67 @@
+//@charset "UTF-8";
+
+/* font weight translate:
+100 = thin
+200 = extralight
+300 = light
+400 = regular
+500 = medium
+600 = semibold
+700 = bold
+800 = extrabold
+900 = black
+*/
+
+@font-face {
+  font-family: 'CivilPremium';
+  src: url('../font/CivilPremium-Thin2.woff2') format('woff2'),
+  url('../font/CivilPremium-Thin2.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CivilPremium';
+  src: url('../font/CivilPremium-Light2.woff2') format('woff2'),
+  url('../font/CivilPremium-Light2.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CivilPremium';
+  src: url('../font/CivilPremium-Regular2.woff2') format('woff2'),
+  url('../font/CivilPremium-Regular2.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CivilPremium';
+  src: url('../font/CivilPremium-Medium2.woff2') format('woff2'),
+  url('../font/CivilPremium-Medium2.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CivilPremium';
+  src: url('../font/CivilPremium-SemiBold2.woff2') format('woff2'),
+  url('../font/CivilPremium-SemiBold2.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CivilPremium';
+  src: url('../font/CivilPremium-Bold2.woff2') format('woff2'),
+  url('../font/CivilPremium-Bold2.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
