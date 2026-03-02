@@ -1,85 +1,75 @@
 # Palmistry AI 🔮🖐️
 
-Oficiální aplikace pro věštění z ruky pomocí AI pro akci Městské části Praha 6.
+Oficiální aplikace pro věštění z ruky pomocí AI pro Career Expo Úřadu městské části Praha 6.
 
-## 🌟 Features/Funkce
+## 🌟 Funkce
 
 - Nahrání nebo vyfocení dlaně
-- Automatická detekce dlaně (pomocí GPT-4o-vision)
-- Generování věštby (v češtině)
-- Historie věšteb vázaná na cookie
-- Vlastní URL pro každou věštbu + QR kód
+- Automatická detekce dlaně pomocí GPT-4o vision
+- Generování osobní věštby v češtině
+- Věštba zohledňuje jméno, pohlaví, datum narození, západní znamení, čínský horoskop a živel
+- Sdílení věštby – stažení jako obrázek, tisk, sdílení přes nativní API
 
 ## 🚀 Tech Stack
 
-- **Frontend**: Next.js s Reactem
-- **Styly**: SASS
-- **UI Komponenty**: shadcn/ui
-- **Animace**: Framer Motion
-- **Ikony**: Lucide React, vlastní ikony
-- **API Požadavky**: Axios
-- **Data Uložiště**: Firebase, Firestore
+- **Frontend:** Next.js s Reactem
+- **Styly:** SASS
+- **UI Komponenty:** shadcn/ui
+- **Animace:** Framer Motion
+- **Ikony:** Lucide React
+- **API požadavky:** Axios
 
-## 🔐 Bezpečnost
+## 🧠 AI Model
 
-- Každý uživatel dostane anonymní token do cookie
-- Věštby v PastReadingsGallery jsou zobrazeny pouze tomu, kdo je vytvořil
-- Přístup na URL věštby je možný přes QR kód
-
-## 🧠 AI Modely
-
-- **Kontrola a Analýza z ruky**: Open AI (GPT-4o-vision)
+- **Analýza dlaně a generování věštby:** OpenAI GPT-4o vision
+- Dvoufázové zpracování: detekce ruky + generování věštby
+- Fallback věštba pokud je fotografie nekvalitní nebo nečitelná
+- Věštba vždy zahrnuje kariérní doporučení pro Úřad MČ Praha 6
 
 ## 🏗️ Struktura Projektu
 
-- `components/`: React komponenty (Hero, FileUpload, PalmReading, etc.)
-- `pages/`: Next.js stránky a API routy
-- `lib/`: Utility funkce a AI model interakce
-- `public/`: Statické dokumenty (static assets)
+- `components/` – React komponenty (FileUpload, PalmReading, ImagePreview, HowToUse aj.)
+- `app/api/` – Next.js API routy
+- `lib/` – Utility funkce, AI model, astrologie
+- `public/` – Statické soubory
 
-## 🚀 Začínáme lokálně
+## 🚀 Lokální spuštění
 
 1. Naklonovat repozitář:
-   ```
-   git clone https://github.com/NatyKITT/Palm-Reader-AI
-   ```
+```bash
+git clone https://github.com/NatyKITT/Palm-Reader-AI-EXPO
+```
 
 2. Nainstalovat závislosti:
-   ```
-   npm install
-   ```
+```bash
+npm install
+```
 
-3. Nastavit proměnné prostředí (environment variables):
-   Založit `.env.local` složku s následujícími klíči:
-   ```
-   
-   OPENAI_API_KEY=open_ai_api_key
-   NEXT_PUBLIC_FIREBASE_API_KEY=firebase_api_key
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=tvuj_projekt_id.firebaseapp.com
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=tvuj_projekt_id
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=tvuj_projekt_id.firebasestorage.app
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=tvuj_projekt_sender_id
-   NEXT_PUBLIC_FIREBASE_APP_ID=tvuj_projekt_app_id
-   ```
+3. Vytvořit `.env.local` s následujícími klíči:
+```env
+OPENAI_API_KEY=tvuj_openai_api_klic
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+```
 
-4. Rozjeď development server:
-   ```
-   npm run dev
-   ```
+4. Spustit vývojový server:
+```bash
+npm run dev
+```
 
-5. Otevři [http://localhost:3000](http://localhost:3000) v prohlížeči.
+5. Otevřít [http://localhost:3000](http://localhost:3000) v prohlížeči.
 
 ## 📦 Build pro produkci
+```bash
+npm run build
+```
 
-   ```
-   cross-env NODE_ENV=production npm run build
-   ```
+## 🔐 Bezpečnost a architektura
 
-   ```
-   npm run start
-   ```
+- Stateless architektura – žádná databáze ani ukládání dat
+- OpenAI API klíč je pouze na serveru, nikdy se nepošle klientovi
+- Rate limiting podle IP adresy
 
 ## 🙏 Poděkování
 
-- [OpenAI](https://platform.openai.com/) za poskytnutí AI modelu, placená verze
-- [Firebase](https://firebase.google.com/) pro ukládání dat v databázi, placená/neplacená free verze na zkoušku
+- [OpenAI](https://openai.com) za poskytnutí GPT-4o modelu
+- [Úřad MČ Praha 6](https://www.praha6.cz) za podporu projektu

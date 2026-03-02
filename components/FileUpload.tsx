@@ -68,7 +68,7 @@ const FileUpload: React.FC<FileUploadProps> = ({onUploadComplete}) => {
       const base64 = await resizeImageToBase64(file);
       onUploadComplete(base64);
     } catch (error) {
-      console.error('Chyba pri zpracovani obrazku:', error);
+      console.error('Chyba při zpracování obrázku:', error);
     } finally {
       setIsProcessing(false);
     }
@@ -105,7 +105,7 @@ const FileUpload: React.FC<FileUploadProps> = ({onUploadComplete}) => {
                 onChange={handleFileChange} ref={fileInputRef}
                 className="fileupload_input" style={{display: 'none'}} />
               <button className="btn_bordered fileupload_btn btn-width" onClick={handleButtonClick} disabled={isProcessing}>
-                {isProcessing ? 'Zpracovavam...' : 'Vyfotit'} <Camera className="icon_svg"/>
+                {isProcessing ? 'Zpracovávám...' : 'Vyfotit'} <Camera className="icon_svg"/>
               </button>
             </>
           )}
@@ -115,7 +115,7 @@ const FileUpload: React.FC<FileUploadProps> = ({onUploadComplete}) => {
                 className="fileupload_input" ref={fileInputRef}
                 accept="image/*" style={{display: 'none'}} />
               <button className="btn_fill fileupload_btn btn-width" onClick={handleButtonClick} disabled={isProcessing}>
-                {isProcessing ? 'Zpracovavam...' : 'Nahrat obrazek'} <Upload className="icon_svg"/>
+                {isProcessing ? 'Zpracovávám...' : 'Nahrát obrázek'} <Upload className="icon_svg"/>
               </button>
               <button className="btn_bordered fileupload_btn btn-width" onClick={() => setIsWebcamOpen(true)} disabled={isProcessing}>
                 Vyfotit <Camera className="icon_svg"/>
@@ -129,7 +129,7 @@ const FileUpload: React.FC<FileUploadProps> = ({onUploadComplete}) => {
             className="fileupload_camera" videoConstraints={{facingMode: 'environment'}} />
           <div className="fileupload_actions">
             <button className="btn_fill btn-width" onClick={handleWebcamCapture}>Vyfotit</button>
-            <button className="btn_bordered btn-width" onClick={() => setIsWebcamOpen(false)}>Zrusit</button>
+            <button className="btn_bordered btn-width" onClick={() => setIsWebcamOpen(false)}>Zrušit</button>
           </div>
         </div>
       )}

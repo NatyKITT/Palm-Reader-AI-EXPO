@@ -6,7 +6,6 @@
   }
 }
 
-/*=== Globální sekce stránky ===*/
 .section {
   width: 100%;
   padding: 60px 20px;
@@ -18,13 +17,11 @@
   margin: 0 auto;
   padding: 0 20px;
 
-  /*Medium devices (tablets) (col-md-*) */
   @media (max-width: $screen_w_sm) {
     padding: 0;
   }
 }
 
-/*=== Karta (např. výklad a nahrání) ===*/
 .p6_card {
   background-color: white;
   border: 1px solid $clr-primary-150;
@@ -45,7 +42,6 @@
   }
 }
 
-/*=== Tlačítka ===*/
 .btn_fill {
   display: inline-block;
   background-color: $clr-primary-700;
@@ -62,7 +58,6 @@
   background-color: $clr-primary-900;
 }
 
-/*=== Záložky ===*/
 .tabs_nav {
   display: flex;
   justify-content: center;
@@ -70,7 +65,6 @@
   overflow: hidden;
   margin-bottom: 20px;
 
-  /*Medium devices (tablets) (col-md-*) */
   @media (max-width: $screen_w_sm) {
     flex-direction: column;
     align-items: stretch;
@@ -91,7 +85,6 @@
   color: white;
 }
 
-/*=== Načítání a chybové hlášky ===*/
 .loading_box {
   text-align: center;
   padding: 20px;
@@ -126,7 +119,6 @@
   margin-top: 16px;
 }
 
-/* Placeholder pro věštby bez uloženého obrázku */
 .reading-thumb--placeholder,
 .page-detail__reading--image-placeholder {
   display: flex;
@@ -136,4 +128,123 @@
   border-radius: 12px;
   font-size: 3rem;
   min-height: 120px;
+}
+
+.reading-container {
+  margin-top: 1.5rem;
+}
+
+.reading-card-printable {
+  background: #ffffff;
+  border: 1px solid #d0dff5;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.reading-card-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.reading-card-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.reading-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $clr-primary-600;
+  margin: 0;
+}
+
+.reading-card-name {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+.zodiac-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.88rem;
+  color: $clr-primary-600;
+  background: #eef3fb;
+  border: 1px solid $clr-primary-150;
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+
+  span { color: $clr-primary-600; }
+}
+
+.zodiac-divider {
+  margin: 0 0.4rem;
+  opacity: 0.4;
+}
+
+.reading-text {
+  line-height: 1.85;
+  white-space: pre-wrap;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.reading-card-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.78rem;
+  color: #aaa;
+  letter-spacing: 0.04em;
+}
+
+.reading-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.btn-action {
+  flex: 1;
+  min-width: 130px;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: none;
+  white-space: nowrap;
+  text-align: center;
+  font-family: inherit;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 132, 124, 0.35);
+  }
+
+  &:active { transform: translateY(0); }
+
+  &--filled {
+    background-color: $clr-primary-600;
+    color: white;
+    border: 2px solid $clr-primary-600;
+    &:hover { background-color: $clr-primary-800; border-color: $clr-primary-800; }
+  }
+
+  &--outlined {
+    background: transparent;
+    color: $clr-primary-600;
+    border: 2px solid $clr-primary-600;
+    &:hover { background-color: rgba(0, 132, 124, 0.35); }
+  }
 }

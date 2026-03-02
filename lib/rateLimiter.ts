@@ -1,15 +1,21 @@
-import {RateLimiterMemory} from 'rate-limiter-flexible';
+const requests = new Map<string, {count: number; resetAt: number}>();
 
-const limiter = new RateLimiterMemory({
-  points: 5, // 5 requestů
-  duration: 60, // za minutu
-});
+const MAX_REQUESTS = 5;
+const WINDOW_MS = 60 * 1000;
 
 export async function isRateLimited(ip: string): Promise<boolean> {
-  try {
-    await limiter.consume(ip);
+  const now = Date.now();
+  const entry = requests.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    requests.set(ip, {count: 1, resetAt: now + WINDOW_MS});
     return false;
-  } catch {
+  }
+
+  if (entry.count >= MAX_REQUESTS) {
     return true;
   }
+
+  entry.count++;
+  return false;
 }

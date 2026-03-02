@@ -7,7 +7,7 @@ import ConditionalHero from "@/components/ConditionalHero";
 
 export const metadata: Metadata = {
   title: "Palm Reader - MČ Praha 6",
-  description: "Oficiální aplikace pro věštění z ruky na akci Městské části Praha 6",
+  description: "Oficiální aplikace pro věštění z ruky MČ Praha 6 - Career Expo",
 };
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
