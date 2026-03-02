@@ -95,7 +95,6 @@ export default function Home() {
         <div className="spacer spacer_40"></div>
 
         <div className="grid_content">
-          {/* formKey způsobí remount = reset všech inputů na prázdné */}
           <div key={formKey} className="input_box">
             <div>
               <label htmlFor="name">Jméno (nepovinné)</label>

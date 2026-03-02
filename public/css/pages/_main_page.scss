@@ -262,3 +262,115 @@
     &:hover { background-color: rgba(0, 132, 124, 0.1); }
   }
 }
+
+#palm-print-root {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 6mm;
+    size: A4;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body > *:not(#palm-print-root) {
+    display: none !important;
+  }
+
+  #palm-print-root {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    background: #fff;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .palm-print-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 8mm !important;
+    box-sizing: border-box !important;
+    border: 1.5px solid #d0e8e6;
+    border-radius: 12px;
+    color: #1a1a1a;
+    font-size: 9.5pt;
+    line-height: 1.65;
+  }
+
+  .palm-print-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid #eef3fb;
+  }
+
+  .palm-print-header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .palm-print-icon { font-size: 1.3rem; }
+
+  .palm-print-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #00847C;
+  }
+
+  .palm-print-name {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
+  }
+
+  .palm-print-zodiac {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #eef7f6;
+    border: 1px solid #c8e6e4;
+    border-radius: 999px;
+    padding: 0.15rem 0.8rem;
+    font-size: 0.75rem;
+    color: #00847C;
+    font-weight: 500;
+  }
+
+  .palm-print-dot { opacity: 0.4; }
+
+  .palm-print-reading {
+    font-size: 9pt;
+    line-height: 1.7;
+    color: #222;
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+
+  .palm-print-footer {
+    margin-top: 0.8rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid #eef3fb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.68rem;
+    color: #aaa;
+
+    span:last-child {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #00847C;
+    }
+  }
+}
