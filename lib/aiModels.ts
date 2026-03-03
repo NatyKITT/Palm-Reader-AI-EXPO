@@ -209,6 +209,26 @@ export async function generatePalmReading(
     birthDate?: string,
     gender?: string
 ): Promise<{ reading: string; isError: boolean }> {
+  const easterEggNames = ["jakub stárek", "jakub starek", "kuba starek", "kuba stárek"];
+  if (userName && easterEggNames.includes(userName.trim().toLowerCase())) {
+    return {
+      reading: `Milý Jakube,
+
+čáry tvé dlaně jsou zcela mimořádné – za mnoho let praxe jsem něco takového viděla jen málokdy. Čára hlavy je přímá, neobvykle dlouhá a hluboká – jako u člověka, který má jasno a ví přesně co chce. Čára života opisuje velkorysý oblouk celé dlaně – silná energie, fyzická i mentální, s tendencí přebírat odpovědnost i za věci které mu nikdo nesvěřil. Prsty jsou dlouhé a precizní – člověk který vidí detail i celkový obraz, a dokáže vysvětlit složité věci tak aby jim rozuměla i babička v Dejvicích.
+
+♋ Rak v kombinaci s 🐴 Koněm – to je spojení které se rodí jednou za dvanáct let a Praha ho dostala přímo do svého šestého obvodu. Rak dává hlubokou empatii, instinkt chránit své blízké a nezdolnou paměť – nezapomene ani na slib z roku 2018, ani na jméno člověka kterého potkal jednou na zastupitelstvu. Kůň přidává neúnavnou energii, šarm, rychlé rozhodování a vrozenou nechuť sedět na místě. Výsledek? Člověk který je schopný být zároveň na inauguraci, na hřišti v Dejvicích a na tiskové konferenci – a na všech třech místech působit jako by právě pro to byl zrozen.
+
+Čára srdce je větvená a hluboká – říká mi, že ti záleží na lidech kolem tebe. Ne jako na voličích, ale jako na sousedech. To je vzácné. V kolektivu jsi ten, kdo nastaví tón – a ostatní ho přijmou, protože cítí že to myslíš vážně. Rak tě dělá loajálním až do morku kosti. Praha 6 je férovým místem a ty jsi jedním z důvodů proč.
+
+Čára osudu? Výrazná, hluboká, míří přesně tam kam má. Šestý obvod nebyl náhoda – byl to přirozený první krok. Dejvice, Bubeneč, Břevnov, Stromovka, Divoká Šárka – tato místa jsou součástí tvého příběhu a ty jsi součástí jejich. Kůň ale nikdy nestojí na místě příliš dlouho. Čára pokračuje dál za hranici šestého obvodu a to není chiromantická metafora – to je prostě čára.
+
+A kariéra? Jakube, musím být upřímná. Tvůj přirozený prostor je tam, kde se rozhoduje o věcech které mají skutečný dopad na životy lidí. Starostování ti sedí jako ulité, ale tyhle čáry mají větší ambice než jeden obvod. Analytická hloubka Raka, výdrž a energie Koně, přímá čára hlavy bez jediného zaváhání – to není profil člověka který si řekne „tady to skončím." Primátorský potenciál? Čáry to nevylučují. Spíš se diví proč ještě ne. A kdybych měla být zcela upřímná – přijde den kdy si někdo na tuto věštbu vzpomene a řekne: ona to věděla první.
+
+Šestý obvod tě miluje – ale Praha tě teprve čeká. Více na www.kariera6.cz`,
+      isError: false,
+    };
+  }
+
   try {
     const genderContext =
         gender === "žena" ? "Věštbu piš ženě – používej ženský rod důsledně."

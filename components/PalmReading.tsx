@@ -104,7 +104,7 @@ const PalmReading: React.FC<PalmReadingProps> = ({ reading, birthdate, userName,
 
           <p className="reading-text">{reading}</p>
 
-          <div className="reading-card-footer">✨ Věštba je pouze pro zábavu · Career Expo · MÚČ Praha 6</div>
+          <div className="reading-card-footer">✨ Věštba je pouze pro zábavu · Career Expo · ÚMČ Praha 6</div>
         </div>
 
         <div className="reading-actions">
@@ -151,7 +151,7 @@ const PalmReading: React.FC<PalmReadingProps> = ({ reading, birthdate, userName,
                 <div className="palm-print-reading">{reading}</div>
 
                 <div className="palm-print-footer">
-                  <span>✨ Věštba je pouze pro zábavu · Career Expo · MÚČ Praha 6</span>
+                  <span>✨ Věštba je pouze pro zábavu · Career Expo · ÚMČ Praha 6</span>
                   <span>www.kariera6.cz</span>
                 </div>
               </div>
