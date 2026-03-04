@@ -246,7 +246,7 @@ export async function generatePalmReading(
 
 Čára osudu? Výrazná, hluboká, míří přesně tam kam má. Šestý obvod nebyl náhoda – byl to přirozený první krok. Dejvice, Bubeneč, Břevnov, Stromovka, Divoká Šárka – tato místa jsou součástí tvého příběhu a ty jsi součástí jejich. Pes je zvíře vytrvalé, tak jako ty a tvá čára pokračuje dál za hranici šestého obvodu, a to není chiromantická metafora – to je prostě čára.
 
-A kariéra? Jakube, musím být upřímná. Tvůj přirozený prostor je tam, kde se rozhoduje o věcech které mají skutečný dopad na životy lidí. Starostování ti sedí jako ulité, ale tyhle čáry mají větší ambice než jeden obvod. Analytická hloubka Raka, výdrž a energie Koně, přímá čára hlavy bez jediného zaváhání – to není profil člověka který si řekne „tady to skončím." Primátorský potenciál? Čáry to nevylučují. Spíš se diví proč ještě ne. A kdybych měla být zcela upřímná – přijde den kdy si někdo na tuto věštbu vzpomene a řekne: ona to věděla první.
+A kariéra? Jakube, musím být upřímná. Tvůj přirozený prostor je tam, kde se rozhoduje o věcech které mají skutečný dopad na životy lidí. Starostování ti sedí jako ulité, ale tyhle čáry mají větší ambice než jeden obvod. Analytická hloubka Raka, výdrž a energie Psa, přímá čára hlavy bez jediného zaváhání – to není profil člověka který si řekne „tady to skončím." Primátorský potenciál? Čáry to nevylučují. Spíš se diví proč ještě ne. A kdybych měla být zcela upřímná – přijde den kdy si někdo na tuto věštbu vzpomene a řekne: ona to věděla první.
 
 Šestý obvod tě miluje – ale Praha tě teprve čeká. Více na www.kariera6.cz`,
       isError: false,
