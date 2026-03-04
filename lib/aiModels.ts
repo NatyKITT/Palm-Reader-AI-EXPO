@@ -101,24 +101,62 @@ function ageBand(age?: number) {
 }
 
 const ROLE_POOL: RoleOption[] = [
-  { label: "IT projektový manažer (digitální služby pro občany)", track: "IT_KITT6", minAge: 24 },
-  { label: "IT service manager / koordinátor IT podpory (SLA, procesy)", track: "IT_KITT6", minAge: 25 },
-  { label: "specialista kyberbezpečnosti (řízení rizik, bezpečnostní politika)", track: "IT_KITT6", minAge: 26 },
-  { label: "správce M365 a identit (přístupy, bezpečnost, governance)", track: "IT_KITT6", minAge: 23 },
-  { label: "aplikáční správce / owner agendových systémů", track: "IT_KITT6", minAge: 23 },
-  { label: "data/BI analytik pro rozhodování městské části", track: "IT_KITT6", minAge: 22 },
-  { label: "specialista digitalizace procesů (workflow, automatizace)", track: "IT_KITT6", minAge: 23 },
-  { label: "koordinátor dodavatelů IT a licencí", track: "IT_KITT6", minAge: 24 },
-  { label: "junior IT technik / helpdesk specialista", track: "IT_KITT6", minAge: 18, maxAge: 28 },
-  { label: "správce síťové infrastruktury a serverů", track: "IT_KITT6", minAge: 23 },
-
-  { label: "specialista veřejných zakázek", track: "URAD", minAge: 23 },
-  { label: "finanční controlling / rozpočtář", track: "URAD", minAge: 23 },
-  { label: "právní specialista (legislativa, smlouvy, správní agenda)", track: "URAD", minAge: 25 },
-  { label: "správce smluv a evidence (přesnost, pořádek, termíny)", track: "URAD", minAge: 21 },
   { label: "referent správních agend a životních situací", track: "URAD", minAge: 20 },
+  { label: "referent občanských průkazů a cestovních pasů", track: "URAD", minAge: 20 },
+  { label: "správce matriky (evidence obyvatel, oddávání)", track: "URAD", minAge: 22 },
+  { label: "referent evidence vozidel a řidičských průkazů", track: "URAD", minAge: 20 },
+  { label: "referent přestupkového oddělení (správní řízení)", track: "URAD", minAge: 22 },
+  { label: "správce živnostenského rejstříku", track: "URAD", minAge: 21 },
+
+  { label: "finanční controlling / rozpočtář", track: "URAD", minAge: 23 },
+  { label: "specialista veřejných zakázek", track: "URAD", minAge: 23 },
+  { label: "správce účetnictví a fakturace", track: "URAD", minAge: 22 },
+  { label: "auditor / kontrolor veřejných výdajů", track: "URAD", minAge: 25 },
   { label: "specialista dotací a fondů EU", track: "URAD", minAge: 24 },
   { label: "analytik dat a reporting pro vedení radnice", track: "URAD", minAge: 23 },
+
+  { label: "právní specialista (legislativa, smlouvy, správní agenda)", track: "URAD", minAge: 25 },
+  { label: "správce smluv a evidence (přesnost, pořádek, termíny)", track: "URAD", minAge: 21 },
+  { label: "referent majetkového oddělení (převody, nájmy, evidence)", track: "URAD", minAge: 22 },
+
+  { label: "referent stavebního úřadu (povolení, kolaudace)", track: "URBANISM", minAge: 23 },
+  { label: "urbanista / specialista územního rozvoje", track: "URBANISM", minAge: 25 },
+  { label: "koordinátor územního plánu a strategií rozvoje", track: "URBANISM", minAge: 26 },
+
+  { label: "referent životního prostředí (ochrana přírody, odpady)", track: "URBANISM", minAge: 22 },
+  { label: "specialista správy zeleně a plánování (datově i terénně)", track: "URBANISM", minAge: 22 },
+  { label: "koordinátor klimatické adaptace a energetiky budov", track: "URBANISM", minAge: 24 },
+  { label: "koordinátor udržitelnosti a projektů pro veřejný prostor", track: "URBANISM", minAge: 24 },
+
+  { label: "koordinátor dopravy a mobility (procesy, komunikace, dopad)", track: "URBANISM", minAge: 24 },
+  { label: "referent dopravního značení a parkování", track: "URBANISM", minAge: 21 },
+  { label: "správce dat GIS a mapových podkladů", track: "URBANISM", minAge: 22 },
+
+  { label: "referent školství a mateřských škol (agenda, kapacity)", track: "PEOPLE", minAge: 22 },
+  { label: "koordinátor zájmových kroužků a mimoškolních aktivit", track: "PEOPLE", minAge: 21 },
+  { label: "metodik vzdělávání dětí a mládeže", track: "PEOPLE", minAge: 24 },
+  { label: "koordinátor sportu, mládeže a volného času", track: "COMMS", minAge: 22 },
+
+  { label: "sociální kurátor / terénní práce", track: "PEOPLE", minAge: 22 },
+  { label: "koordinátor rodinných služeb (návazné služby pro rodiče)", track: "PEOPLE", minAge: 22 },
+  { label: "koordinátor seniorských programů a aktivního stárnutí", track: "PEOPLE", minAge: 24 },
+  { label: "pracovník sociální prevence a komunitní práce", track: "PEOPLE", minAge: 22 },
+  { label: "referent sociálních dávek a podpory", track: "PEOPLE", minAge: 21 },
+
+  { label: "HR specialista (nábor, adaptace, vzdělávání)", track: "PEOPLE", minAge: 22 },
+  { label: "specialista vzdělávání zaměstnanců (plány, koordinace, péče)", track: "PEOPLE", minAge: 22 },
+  { label: "metodik péče o zaměstnance a wellbeing", track: "PEOPLE", minAge: 25 },
+  { label: "koordinátor BOZP a požární ochrany", track: "PROJECTS", minAge: 25 },
+
+  { label: "koordinátor kultury a komunitních akcí", track: "COMMS", minAge: 20 },
+  { label: "správce kulturních zařízení a městských prostor", track: "COMMS", minAge: 23 },
+  { label: "koordinátor dobrovolnictví a zapojení občanů", track: "COMMS", minAge: 21 },
+
+  { label: "specialista komunikace s občany (srozumitelnost, web, obsah)", track: "COMMS", minAge: 20 },
+  { label: "správce sociálních sítí / community manager", track: "COMMS", minAge: 18 },
+  { label: "PR specialista / tisková podpora (věcnost, klid, styl)", track: "COMMS", minAge: 22 },
+  { label: "redaktor / editor obsahu pro web a zpravodaj", track: "COMMS", minAge: 20 },
+  { label: "grafik / vizuální komunikátor (print i digitál)", track: "COMMS", minAge: 20 },
 
   { label: "projektový manažer (koordinace týmů a dodavatelů)", track: "PROJECTS", minAge: 24 },
   { label: "koordinátor investic a správy majetku", track: "PROJECTS", minAge: 27 },
@@ -126,30 +164,16 @@ const ROLE_POOL: RoleOption[] = [
   { label: "koordinátor provozu budov a služeb (organizace, odpovědnost)", track: "PROJECTS", minAge: 24 },
   { label: "facility manažer (správa budov a technického zázemí)", track: "PROJECTS", minAge: 25 },
   { label: "koordinátor krizového řízení a continuity", track: "PROJECTS", minAge: 28 },
-
-  { label: "specialista komunikace s občany (srozumitelnost, web, obsah)", track: "COMMS", minAge: 20 },
-  { label: "správce sociálních sítí / community manager", track: "COMMS", minAge: 18 },
-  { label: "koordinátor kultury a komunitních akcí", track: "COMMS", minAge: 20 },
-  { label: "PR specialista / tisková podpora (věcnost, klid, styl)", track: "COMMS", minAge: 22 },
-  { label: "redaktor / editor obsahu pro web a zpravodaj", track: "COMMS", minAge: 20 },
-  { label: "koordinátor sportu, mládeže a volného času", track: "COMMS", minAge: 22 },
-  { label: "grafik / vizuální komunikátor (print i digitál)", track: "COMMS", minAge: 20 },
-
-  { label: "HR specialista (nábor, adaptace, vzdělávání)", track: "PEOPLE", minAge: 22 },
-  { label: "specialista vzdělávání zaměstnanců (plány, koordinace, péče)", track: "PEOPLE", minAge: 22 },
-  { label: "sociální kurátor / terénní práce", track: "PEOPLE", minAge: 22 },
-  { label: "koordinátor rodinných služeb (návazné služby pro rodiče)", track: "PEOPLE", minAge: 22 },
-  { label: "koordinátor seniorských programů a aktivního stárnutí", track: "PEOPLE", minAge: 24 },
-  { label: "pracovník sociální prevence a komunitní práce", track: "PEOPLE", minAge: 22 },
-  { label: "metodik péče o zaměstnance a wellbeing", track: "PEOPLE", minAge: 25 },
-
   { label: "smart city koordinátor (projekty, data, městské inovace)", track: "URBANISM", minAge: 24 },
-  { label: "koordinátor udržitelnosti a projektů pro veřejný prostor", track: "URBANISM", minAge: 24 },
-  { label: "specialista správy zeleně a plánování (datově i terénně)", track: "URBANISM", minAge: 22 },
-  { label: "koordinátor dopravy a mobility (procesy, komunikace, dopad)", track: "URBANISM", minAge: 24 },
-  { label: "urbanista / specialista územního rozvoje", track: "URBANISM", minAge: 25 },
-  { label: "koordinátor klimatické adaptace a energetiky budov", track: "URBANISM", minAge: 24 },
-  { label: "správce dat GIS a mapových podkladů", track: "URBANISM", minAge: 22 },
+
+  { label: "IT projektový manažer (digitální služby pro občany)", track: "IT_KITT6", minAge: 24 },
+  { label: "IT service manager / koordinátor IT podpory (SLA, procesy)", track: "IT_KITT6", minAge: 25 },
+  { label: "specialista digitalizace procesů (workflow, automatizace)", track: "IT_KITT6", minAge: 23 },
+  { label: "správce M365 a identit (přístupy, bezpečnost, governance)", track: "IT_KITT6", minAge: 23 },
+  { label: "aplikáční správce / owner agendových systémů", track: "IT_KITT6", minAge: 23 },
+  { label: "data/BI analytik pro rozhodování městské části", track: "IT_KITT6", minAge: 22 },
+  { label: "junior IT technik / helpdesk specialista", track: "IT_KITT6", minAge: 18, maxAge: 28 },
+  { label: "správce síťové infrastruktury a serverů", track: "IT_KITT6", minAge: 23 },
 ];
 
 const BENEFIT_POOL: string[] = [
@@ -216,11 +240,11 @@ export async function generatePalmReading(
 
 čáry tvé dlaně jsou zcela mimořádné – za mnoho let praxe jsem něco takového viděla jen málokdy. Čára hlavy je přímá, neobvykle dlouhá a hluboká – jako u člověka, který má jasno a ví přesně co chce. Čára života opisuje velkorysý oblouk celé dlaně – silná energie, fyzická i mentální, s tendencí přebírat odpovědnost i za věci které mu nikdo nesvěřil. Prsty jsou dlouhé a precizní – člověk který vidí detail i celkový obraz, a dokáže vysvětlit složité věci tak aby jim rozuměla i babička v Dejvicích.
 
-♋ Rak v kombinaci s 🐴 Koněm – to je spojení které se rodí jednou za dvanáct let a Praha ho dostala přímo do svého šestého obvodu. Rak dává hlubokou empatii, instinkt chránit své blízké a nezdolnou paměť – nezapomene ani na slib z roku 2018, ani na jméno člověka kterého potkal jednou na zastupitelstvu. Kůň přidává neúnavnou energii, šarm, rychlé rozhodování a vrozenou nechuť sedět na místě. Výsledek? Člověk který je schopný být zároveň na inauguraci, na hřišti v Dejvicích a na tiskové konferenci – a na všech třech místech působit jako by právě pro to byl zrozen.
+♋ Rak v kombinaci s 🐕 Psem – to je spojení věrnosti, zodpovědnosti a přirozené schopnosti vést tým. Rak dává hlubokou empatii, instinkt chránit své blízké a nezdolnou paměť – nezapomene ani na slib z roku 2018, ani na jméno člověka kterého potkal jednou na zastupitelstvu. Pes přidává loajalitu, smysl pro spravedlnost, ochotu tvrdě pracovat a vrozenou potřebu vybudovat stabilní zázemí pro své lidi. Výsledek? Člověk který je schopný být zároveň na inauguraci, na hřišti v Dejvicích a na tiskové konferenci – a na všech třech místech působit jako by právě pro to byl zrozen.
 
 Čára srdce je větvená a hluboká – říká mi, že ti záleží na lidech kolem tebe. Ne jako na voličích, ale jako na sousedech. To je vzácné. V kolektivu jsi ten, kdo nastaví tón – a ostatní ho přijmou, protože cítí že to myslíš vážně. Rak tě dělá loajálním až do morku kosti. Praha 6 je férovým místem a ty jsi jedním z důvodů proč.
 
-Čára osudu? Výrazná, hluboká, míří přesně tam kam má. Šestý obvod nebyl náhoda – byl to přirozený první krok. Dejvice, Bubeneč, Břevnov, Stromovka, Divoká Šárka – tato místa jsou součástí tvého příběhu a ty jsi součástí jejich. Kůň ale nikdy nestojí na místě příliš dlouho. Čára pokračuje dál za hranici šestého obvodu a to není chiromantická metafora – to je prostě čára.
+Čára osudu? Výrazná, hluboká, míří přesně tam kam má. Šestý obvod nebyl náhoda – byl to přirozený první krok. Dejvice, Bubeneč, Břevnov, Stromovka, Divoká Šárka – tato místa jsou součástí tvého příběhu a ty jsi součástí jejich. Pes je zvíře vytrvalé, tak jako ty a tvá čára pokračuje dál za hranici šestého obvodu, a to není chiromantická metafora – to je prostě čára.
 
 A kariéra? Jakube, musím být upřímná. Tvůj přirozený prostor je tam, kde se rozhoduje o věcech které mají skutečný dopad na životy lidí. Starostování ti sedí jako ulité, ale tyhle čáry mají větší ambice než jeden obvod. Analytická hloubka Raka, výdrž a energie Koně, přímá čára hlavy bez jediného zaváhání – to není profil člověka který si řekne „tady to skončím." Primátorský potenciál? Čáry to nevylučují. Spíš se diví proč ještě ne. A kdybych měla být zcela upřímná – přijde den kdy si někdo na tuto věštbu vzpomene a řekne: ona to věděla první.
 
@@ -300,11 +324,15 @@ Propoj živel ${element} + ${westernSign.sign} + ${chinese.sign} + čáry dlaně
     const band = ageBand(age);
 
     const preferredTracks: CareerTrack[] =
-        element === "Země" ? ["URAD", "PROJECTS", "IT_KITT6"]
-            : element === "Vzduch" ? ["COMMS", "URBANISM", "IT_KITT6"]
-                : element === "Oheň" ? ["PROJECTS", "COMMS", "URAD"]
-                    : element === "Voda" ? ["PEOPLE", "COMMS", "URAD"]
-                        : ["URAD", "PROJECTS", "COMMS", "PEOPLE", "URBANISM", "IT_KITT6"];
+        element === "Země" ? ["URAD", "URBANISM", "PROJECTS", "PEOPLE"]
+            : element === "Vzduch" ? ["COMMS", "URBANISM", "URAD", "PEOPLE"]
+                : element === "Oheň" ? ["PROJECTS", "COMMS", "PEOPLE", "URAD"]
+                    : element === "Voda" ? ["PEOPLE", "URAD", "COMMS", "URBANISM"]
+                        : ["URAD", "PEOPLE", "URBANISM", "COMMS", "PROJECTS", "IT_KITT6"];
+
+    if (age != null && age >= 18 && age <= 30 && Math.random() < 0.2) {
+      preferredTracks.unshift("IT_KITT6");
+    }
 
     const eligibleRoles = ROLE_POOL.filter((r) => {
       if (age == null) return true;

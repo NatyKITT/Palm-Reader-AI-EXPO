@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a3b5913d-40f0-4651-bcc0-0cd510b40716" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PalmReading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PalmReading.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/aiModels.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/aiModels.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1772027715042</updated>
       <workItem from="1772027716210" duration="37071000" />
-      <workItem from="1772525289478" duration="2017000" />
+      <workItem from="1772525289478" duration="7896000" />
     </task>
     <servers />
   </component>
